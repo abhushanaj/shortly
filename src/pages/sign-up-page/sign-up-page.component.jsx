@@ -16,14 +16,16 @@ const SignUpPage = () => {
 
   return (
     <>
-      <h1 className="signup-heading">Sign Up to to use our services!</h1>
+      <h1 className="signup-heading">Sign Up to use our services!</h1>
       <div className="u-container signin">
         <form class="signin-form">
           <div className="img__container">
             <img src={signup} alt="Macbook Computer." />
           </div>
 
-          <h2 className="sub-title">Signin using Email ID and Password</h2>
+          <h2 className="sub-title signup-title">
+            Signup using Email ID and Password
+          </h2>
 
           <div className="input__group">
             <FormInput
