@@ -1,0 +1,17 @@
+@import "../../sass/styles";
+
+.link__display {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin: 1rem;
+  color: $red;
+  word-spacing: 4px;
+  text-align: center;
+}

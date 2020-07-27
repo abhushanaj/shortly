@@ -1,0 +1,56 @@
+@import "../../sass/styles";
+
+.link__box {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin: 1rem 0;
+  @media only screen and(max-width:600px) {
+    flex-direction: column;
+  }
+}
+
+.original__link {
+  flex: 0 0 50%;
+  @media only screen and(max-width:600px) {
+    width: 100%;
+  }
+  p {
+    font-size: 1.3rem;
+    color: $dark-violet;
+    @media only screen and(max-width:600px) {
+      text-align: center;
+    }
+  }
+}
+
+.shorten__link {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media only screen and(max-width:600px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  a {
+    font-size: 1.3rem;
+    align-self: center;
+    color: $cyan;
+    &:hover {
+      color: $very-dark-violet;
+    }
+  }
+
+  button {
+    margin: 0 2rem;
+    @media only screen and(max-width:600px) {
+      margin: 2rem 0;
+      width: 90%;
+    }
+  }
+}
