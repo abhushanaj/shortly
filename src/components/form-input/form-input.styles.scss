@@ -1,0 +1,13 @@
+@import "../../sass/styles";
+
+input {
+  width: 100%;
+  display: block;
+  border: 0;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  background: rgba($gray, 0.3);
+  padding: 1rem 1.5rem;
+  border: 0;
+  outline: 0;
+}
