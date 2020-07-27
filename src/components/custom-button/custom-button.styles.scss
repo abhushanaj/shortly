@@ -1,0 +1,27 @@
+@import "../../sass/styles";
+
+.btn {
+  display: block;
+  border: 0;
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: $normal;
+  font-size: 1.4rem;
+  background: $cyan;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: $dark-violet;
+  }
+
+  &.btn-rounded {
+    border-radius: 2rem;
+  }
+  &.btn-small {
+    font-size: 1.3rem;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+  }
+}

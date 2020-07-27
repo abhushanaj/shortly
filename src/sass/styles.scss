@@ -1,0 +1,39 @@
+/* Colors */
+
+/* Primary Colors */
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+
+/* Secondary Colors */
+
+$red: hsl(0, 87%, 67%);
+
+/* Neutral Colors */
+
+$gray: hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+
+/* Font Weights*/
+$normal: 500;
+$bold: 700;
+
+/* Container styles */
+
+.u-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media only screen and(max-width:1200px) {
+    width: 90%;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
