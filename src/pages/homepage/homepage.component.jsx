@@ -17,7 +17,7 @@ const HomePage = ({ currentUser }) => {
         <>
           <ShorteningForm />
           <div className="information__section">
-            <LinksDisplayBox />
+            <LinksDisplayBox displayName={currentUser.displayName} />
           </div>
         </>
       )}
