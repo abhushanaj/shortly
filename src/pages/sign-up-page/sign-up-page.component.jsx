@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import {
+  auth,
+  createProfileDocument,
+} from "../../firebase-utils/firebase.utils";
+
 import FormInput from "../../components/form-input/form-input.component";
 import CustomButton from "../../components/custom-button/custom-button.component";
 
@@ -14,11 +19,39 @@ const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Password doesn't match");
+      return;
+    }
+
+    // if password match, then sign-up user
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+      createProfileDocument(user, { displayName });
+    } catch (error) {
+      console.log({
+        type: "Error while sign-up with email and password",
+        error,
+      });
+    }
+
+    // reset the form
+    setDisplayName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+  };
+
   return (
     <>
       <h1 className="signup-heading">Sign Up to use our services!</h1>
       <div className="u-container signin">
-        <form class="signin-form">
+        <form className="signin-form" onSubmit={handleSubmit}>
           <div className="img__container">
             <img src={signup} alt="Macbook Computer." />
           </div>
@@ -35,6 +68,7 @@ const SignUpPage = () => {
               id="displayName"
               placeholder="Enter your name..."
               handleChange={(value) => setDisplayName(value)}
+              required
             />
           </div>
 
@@ -46,6 +80,7 @@ const SignUpPage = () => {
               id="email"
               placeholder="Enter your email..."
               handleChange={(value) => setEmail(value)}
+              required
             />
           </div>
 
@@ -57,6 +92,7 @@ const SignUpPage = () => {
               id="password"
               placeholder="Enter your password..."
               handleChange={(value) => setPassword(value)}
+              required
             />
           </div>
 
@@ -68,6 +104,7 @@ const SignUpPage = () => {
               id="confirmPassword"
               placeholder="Confirm your password..."
               handleChange={(value) => setConfirmPassword(value)}
+              required
             />
           </div>
 

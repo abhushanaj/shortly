@@ -10,6 +10,7 @@ const CustomButton = ({
   routeTo,
   history,
   squared,
+  staticContext,
   ...otherProps
 }) => {
   return (

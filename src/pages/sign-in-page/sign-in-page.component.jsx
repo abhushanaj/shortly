@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { auth } from "../../firebase-utils/firebase.utils";
+
 import CustomButton from "../../components/custom-button/custom-button.component";
 import FormInput from "../../components/form-input/form-input.component";
 
@@ -15,11 +17,27 @@ const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // sign-in with user email and password
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.log({
+        type: "Error during sign-in of user",
+        error,
+      });
+    }
+    // clear the form
+    setPassword("");
+    setEmail("");
+  };
+
   return (
     <>
       <h1 className="signin-heading">Sign In to access premium services!</h1>
       <div className="u-container signin">
-        <form class="signin-form">
+        <form className="signin-form" onSubmit={handleSubmit}>
           <div className="img__container">
             <img src={workingImage} alt="Macbook Computer." />
           </div>
