@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import "./shorting-form.styles.scss";
-
 import CustomButton from "../custom-button/custom-button.component";
 
-const ShorteningForm = () => {
+import "./shorting-form.styles.scss";
+
+const ShorteningForm = ({ currentUser }) => {
   const [url, setUrl] = useState("");
   const [isEmpty, setIsEmpty] = useState(false);
 
@@ -27,6 +27,7 @@ const ShorteningForm = () => {
       <div className="shorten-form">
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
+            className="white-input"
             type="text"
             placeholder="Shorten a URL here...."
             value={url}

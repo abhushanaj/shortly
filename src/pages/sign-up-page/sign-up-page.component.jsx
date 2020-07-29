@@ -32,7 +32,7 @@ const SignUpPage = () => {
         email,
         password
       );
-      createProfileDocument(user, { displayName });
+      await createProfileDocument(user, { displayName });
     } catch (error) {
       console.log({
         type: "Error while sign-up with email and password",

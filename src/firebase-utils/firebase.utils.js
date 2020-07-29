@@ -16,27 +16,34 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-export const createProfileDocument = async (user, additionalData) => {
-  const userRef = firestore.doc(`/users/${user.uid}`);
-  const userSnapshot = await userRef.get();
-
-  // check if the info is already present
-  if (userSnapshot.exists) {
+export const createProfileDocument = async (userAuthObject, additionalData) => {
+  if (!userAuthObject) {
     return;
   }
 
-  // info to set to DB
-  const createdAt = Date.now();
+  const userRef = firestore.doc(`/users/${userAuthObject.uid}`);
+  const userSnapshot = await userRef.get();
 
-  const userDBObject = {
-    email: user.email,
-    displayName: user.displayName,
-    createdAt,
-    ...additionalData,
-  };
+  // check if the info is already present
+  if (!userSnapshot.exists) {
+    const createdAt = Date.now();
+    const { email, displayName } = userAuthObject;
+    try {
+      userRef.set({
+        email,
+        displayName,
+        createdAt,
+        ...additionalData,
+      });
+    } catch (error) {
+      console.log({
+        type: "Error writing user profile",
+        error,
+      });
+    }
+  }
 
-  await userRef.set(userDBObject);
-  return userDBObject;
+  return userRef;
 };
 
 export default firebase;

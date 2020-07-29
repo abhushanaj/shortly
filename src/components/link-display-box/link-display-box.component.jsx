@@ -7,9 +7,7 @@ import "./link-display-box.styles.scss";
 const LinksDisplayBox = () => {
   return (
     <div className="link__display u-container">
-      <h2 className="title">
-        Hi! Abhushan. Here's your list for shorten URL's.
-      </h2>
+      <h2 className="title">Hi! . Here's your list for shorten URL's.</h2>
       <ShortenLinks />
       <ShortenLinks />
       <ShortenLinks />
