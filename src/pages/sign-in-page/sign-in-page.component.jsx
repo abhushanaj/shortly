@@ -11,9 +11,9 @@ import CustomButton from "../../components/custom-button/custom-button.component
 import FormInput from "../../components/form-input/form-input.component";
 
 import workingImage from "../../asset/119-working.png";
-import github from "../../asset/githhub.svg";
+
+import github from "../../asset/github.svg";
 import google from "../../asset/google.svg";
-import twitter from "../../asset/twitter.svg";
 
 import "./sign-in-page.styles.scss";
 
@@ -88,9 +88,6 @@ const SignInPage = () => {
               onClick={() => signInWithGoogle()}
             >
               <img src={google} alt="Google Logo" />
-            </button>
-            <button className="signin__button">
-              <img src={twitter} alt="Twitter Logo" />
             </button>
           </div>
         </form>
