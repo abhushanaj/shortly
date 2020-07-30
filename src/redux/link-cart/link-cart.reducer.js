@@ -13,6 +13,11 @@ const linkCartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         linksCart: addNewUrl(state.linksCart, action.payload),
       };
+    case linkCartActionTypes.CLEAR_URL_CART:
+      return {
+        ...state,
+        linksCart: [],
+      };
     default:
       return state;
   }

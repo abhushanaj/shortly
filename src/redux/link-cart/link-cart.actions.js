@@ -7,3 +7,10 @@ export const addNewUrl = (urlInfoObject) => {
     payload: urlInfoObject,
   };
 };
+
+export const clearUrlCart = () => {
+  return {
+    type: linkCartActionTypes.CLEAR_URL_CART,
+    info: "This action is used to empty out the URL items",
+  };
+};
