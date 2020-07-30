@@ -55,6 +55,10 @@ export const signInWithGoogle = () => {
 
 // Github Sign-In
 const githubProvider = new firebase.auth.GithubAuthProvider();
+githubProvider.addScope("repo");
+githubProvider.setCustomParameters({
+  allow_signup: "true",
+});
 export const signInWithGithub = () => auth.signInWithPopup(githubProvider);
 
 export default firebase;
