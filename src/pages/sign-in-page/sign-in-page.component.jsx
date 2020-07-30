@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import {
-  auth,
-  signInWithGoogle,
-  signInWithGithub,
-} from "../../firebase-utils/firebase.utils";
+import { auth, signInWithGoogle } from "../../firebase-utils/firebase.utils";
 
 import CustomButton from "../../components/custom-button/custom-button.component";
 import FormInput from "../../components/form-input/form-input.component";
 
 import workingImage from "../../asset/119-working.png";
 
-import github from "../../asset/github.svg";
 import google from "../../asset/google.svg";
 
 import "./sign-in-page.styles.scss";
@@ -77,12 +72,6 @@ const SignInPage = () => {
           </small>
 
           <div className="diff__signin">
-            <button
-              className="signin__button"
-              onClick={() => signInWithGithub()}
-            >
-              <img src={github} alt="Github Logo" />
-            </button>
             <button
               className="signin__button"
               onClick={() => signInWithGoogle()}
