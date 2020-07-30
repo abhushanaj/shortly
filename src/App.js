@@ -18,8 +18,6 @@ import "./App.scss";
 function App({ setCurrentUser, currentUser }) {
   useEffect(
     () => {
-      console.log("Running effect!!");
-
       const unsubscribe = auth.onAuthStateChanged(async (userAuth) => {
         // user is signed in
         if (userAuth) {
