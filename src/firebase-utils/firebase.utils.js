@@ -46,6 +46,17 @@ export const createProfileDocument = async (userAuthObject, additionalData) => {
   return userRef;
 };
 
+// Google Sign-in Settings
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+export const signInWithGoogle = () => {
+  return auth.signInWithPopup(googleProvider);
+};
+
+// Github Sign-In
+const githubProvider = new firebase.auth.GithubAuthProvider();
+export const signInWithGithub = () => auth.signInWithPopup(githubProvider);
+
 export default firebase;
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();

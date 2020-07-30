@@ -72,5 +72,10 @@ small {
     border: 0;
     outline: 0;
     cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    img {
+      max-width: 100%;
+    }
   }
 }
