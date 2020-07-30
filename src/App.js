@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { auth, createProfileDocument } from "./firebase-utils/firebase.utils";
 
 import Navbar from "./components/navbar/navbar.component";
-
+import Footer from "./components/footer/footer.component";
 import HomePage from "./pages/homepage/homepage.component";
 import SignInPage from "./pages/sign-in-page/sign-in-page.component";
 import SignUpPage from "./pages/sign-up-page/sign-up-page.component";
@@ -64,6 +64,7 @@ function App({ setCurrentUser, currentUser }) {
           }}
         />
       </Switch>
+      <Footer />
     </>
   );
 }
