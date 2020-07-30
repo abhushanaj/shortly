@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SHORTLY
 
-## Available Scripts
+A React + Redux Web Application which can be used to shorten URL's and store them for later use.
 
-In the project directory, you can run:
+## APPLICATION INTERFACE
 
-### `npm start`
+### HOMEPAGE
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![HomePage](https://user-images.githubusercontent.com/49617450/88919499-d1796300-d288-11ea-90a4-331582b7c5f8.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### SIGN-IN PAGE
 
-### `npm test`
+![Sign_In_Page](https://user-images.githubusercontent.com/49617450/88919620-0c7b9680-d289-11ea-81bd-3fbed1d01c49.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### SIGN_UP_PAGE
 
-### `npm run build`
+![Sign_Up_Page](https://user-images.githubusercontent.com/49617450/88919625-0f768700-d289-11ea-8ecc-567d3e8185fb.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### SERVICE PAGE
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Service_Page](https://user-images.githubusercontent.com/49617450/88919635-143b3b00-d289-11ea-912d-9313046f32ad.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Steps to open the application on you local environment:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Clone the repository using `https://github.com/abhu-A-J/shortly.git`.
+2. Move to the cloned project using `cd shortly`.
+3. Run `npm install` to install all the dependencies required to start the application.
+4. Run `npm start` to start the application and it serves itself up at `http://localhost:3000/`.
