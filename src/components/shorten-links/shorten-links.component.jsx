@@ -4,19 +4,15 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import "./shorten-links.styles.scss";
 
-const ShortenLinks = () => {
+const ShortenLinks = ({ hashid, url }) => {
   return (
     <div className="link__box">
       <div className="original__link">
-        <p>https://www.google.com</p>
+        <p>{url}</p>
       </div>
       <div className="shorten__link">
-        <a
-          href="https://www.rel.li/084knd"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          https://www.rel.li/084knd
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {`https://rel.ink/api/links/${hashid}`}
         </a>
         <CustomButton squared>Copy!</CustomButton>
       </div>
