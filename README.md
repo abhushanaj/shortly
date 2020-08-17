@@ -1,6 +1,8 @@
 # SHORTLY
 
-A React + Redux Web Application which can be used to shorten URL's and store them for later use.
+Welcome to Shortly! The permanent solution towards forgetting long-ass URL's through a neighbourhood friendly URL shortener. Have shortly help you out with remembering all those nasty long URL by storing them right up in your local storage. 
+
+
 
 ## APPLICATION INTERFACE
 
